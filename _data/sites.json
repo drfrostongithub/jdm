@@ -5688,8 +5688,9 @@
     {
         "name": "Jobstreet",
         "url": "https://myjobstreet-id.jobstreet.co.id/registration/delete-account.php",
-        "difficulty": "easy",
-        "notes": "Log in. Go to your account setting on top bar. Select delete my account on secondary bar. You need to pull out all of your applications before continuing.",
+        "difficulty": "medium",
+        "notes": "Log in. Go to your account setting on top bar. Select 'Delete my Account' on secondary bar. You need to pull out all of your applications before continuing.",
+        "notes_id": "Login ke akunmu, masuk ke akun setting di bar paling atas. Pilih 'Delete my Account' di bar kedua. Kamu harus menarik semua lamaran aktifmu sebelum melanjutkan.",
         "domains": [
             "jobstreet.com"
         ]
@@ -6003,6 +6004,17 @@
         "difficulty": "easy",
         "domains": [
             "launchpad.net"
+        ]
+    },
+
+    {
+        "name": "Lazada",
+        "url": "https://my.lazada.co.id/",
+        "difficulty": "impossible",
+        "notes": "No way to delete your account on this website, even if you ask on their customer support, they only give you instructions on how to uninstall the application.",
+        "notes_id": "Kamu tidak bisa menghapus sama sekali akunmu, bahkan jika bertanya kepada CS, mereka hanyak akan mengarahkan untuk menguninstall aplikasi.",
+        "domains": [
+            "lazada.co.id"
         ]
     },
 
@@ -10158,6 +10170,20 @@
     },
 
     {
+        "name": "SmallPDF",
+        "url": "https://smallpdf.com/profile",
+        "difficulty": "hard",
+        "notes": "The only way to delete your account is by emailing their customer support team.",
+        "notes_id": "Cara yang bisa kamu lakukan adalah mengirim permohonan untuk menghapus ke CS dengan surel.",
+        "email": "support@smallpdf.com",
+        "email_subject": "Delete Account",
+        "email_body": "Hi, I want to permanently delete my account from SmallPDF, thanks",
+        "domains": [
+            "smallpdf.com"
+        ]
+    },
+
+    {
         "name": "SmartRecruiters",
         "url": "https://help.smartrecruiters.com/Getting_Started/User_settings/How_do_I_close_my_user_account%3F",
         "difficulty": "impossible",
@@ -11085,6 +11111,17 @@
         "notes_tr": "\"Hesap\" \"Menü\" \"Gizlilik Ayarları\" \"Gizlilik ve Güvenlik\" \"Hesabı Sil\" \"Sonraki\" \"Devam Et\" \"Hesabı Sil\" tuşuna tıklayın.",
         "domains": [
             "tiktok.com"
+        ]
+    },
+
+    {
+        "name": "Tinder",
+        "url": "https://tinder.com/app/profile",
+        "difficulty": "easy",
+        "notes": "At the bottom of the profile page is a delete account buttom, after clicking on it, you can either hide it or delete your account entirely.",
+        "notes_id": "Di bawah profile page ada tombol 'Delete Account', setelah klik tombol tersebut, kamu bisa menyembunyikan atau menghapus secara keseluruhan akunmu.",
+        "domains": [
+            "tinder.com"
         ]
     },
 
@@ -12382,6 +12419,16 @@
         "notes_es": "Selecciona 'delete my profile' al final de la página.",
         "domains": [
             "xing.com"
+        ]
+    },
+
+    {
+        "name": "XSplit",
+        "url": "https://www.xsplit.com/dashboard/settings",
+        "difficulty": "easy",
+        "notes": "At the bottom of the account settings there is a delete account button. You'll just need to re-enter your password.",
+        "domains": [
+            "xsplit.com"
         ]
     },
 
