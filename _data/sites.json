@@ -429,6 +429,18 @@
     },
 
     {
+        "name": "AirVPN",
+        "url": "https://airvpn.org/contact/",
+        "difficulty": "hard",
+        "notes": "Visit the linked form and submit a support ticket requesting account deletion. Make sure you are logged in so they can find your account, or specify your username in your message. Alternatively, you may also send an email.",
+        "email": "support@airvpn.org",
+        "domains": [
+            "airvpn.org",
+            "airvpn.dev"
+        ]
+    },
+
+    {
         "name": "AKAI Professional",
         "url": "https://www.akaipro.com/privacy-policy",
         "email": "privacy@inmusicbrands.com",
@@ -2820,6 +2832,17 @@
     },
 
     {
+        "name": "Digio",
+        "url": "https://www.digio.com.br/",
+        "difficulty": "impossible",
+        "notes": "There is no delete button and talking to the customer support gets you nowhere, they only understand you want to cancel the bank account or the credit card, but not remove the login information.",
+        "notes_pt_br": "Não há botão para excluir a conta e falar com o atendimento ao cliente não resolve, eles só sabem deletar a DigioConta ou cancelar o cartão Digio, mas não entendem sobre remoção do login.",
+        "domains": [
+            "digio.com.br"
+        ]
+    },
+
+    {
         "name": "DigitalOcean",
         "url": "https://cloud.digitalocean.com/account/profile/deactivate",
         "difficulty": "easy",
@@ -3449,6 +3472,16 @@
     },
 
     {
+        "name": "enjin",
+        "url": "https://www.enjin.com/dashboard/account/privacy",
+        "difficulty": "easy",
+        "notes": "Scroll down and click on 'Deactivate Account'.",
+        "domains": [
+            "enjin.com"
+        ]
+    },
+
+    {
         "name": "Envato",
         "url": "https://help.market.envato.com/hc/en-us/articles/202500394-How-Do-I-Close-My-Account-",
         "difficulty": "hard",
@@ -3772,6 +3805,16 @@
         "notes_tr": "Hesap silme ile ilgili bir destek talebi oluşturmanız gerekir ve hesabın sahipliğini kanıtlamanız istenir.",
         "domains": [
             "feroxhosting.nl"
+        ]
+    },
+
+    {
+        "name": "Figma",
+        "url": "https://www.figma.com/",
+        "difficulty": "easy",
+        "notes": "Log in, click on your profile picture in the top right of the header, click on 'Settings', scroll down to the accout section, click on 'Delete account', re-enter your account password, type 'delete my account' into the dialog box, and click on 'Delete account'.",
+        "domains": [
+            "figma.com"
         ]
     },
 
@@ -6325,6 +6368,16 @@
         "notes_tr": "Hesabınızın \"Ayarlar\" sayfasına gidin, ardından hesap bilgileri ve \"Hesabı Kapat\" öğesini tıklayın.",
         "domains": [
             "loseit.com"
+        ]
+    },
+
+    {
+        "name": "Love My Credit Union Rewards",
+        "url": "https://rewards.lovemycreditunion.org/contact-us/",
+        "difficulty": "hard",
+        "notes": "Scroll all the way down on the website and find a little button with a picture of an envelope to contact customer support to have your account deleted.",
+        "domains": [
+            "https://rewards.lovemycreditunion.org"
         ]
     },
 
@@ -9208,15 +9261,14 @@
             "raileurope.com"
         ]
     },
+
     {
         "name": "Raindrop.io",
-        "url": "https://raindrop.io/app/#/settings/profile",
-        "difficulty": "hard",
-        "notes": "To delete your account, you need to send an e-mail to info@raindrop.io",
-        "notes_tr": "Hesabınızı sildirmek için onlara e-posta göndermelisiniz",
-        "email": "info@raindrop.io",
+        "url": "https://api.raindrop.io/v1/user/remove",
+        "difficulty": "easy",
         "domains": [
-            "raindrop.io"
+            "raindrop.io",
+            "app.raindrop.io"
         ]
     },
 
@@ -9484,6 +9536,15 @@
         ]
     },
 
+    {
+        "name": "ResumeGenius",
+        "url": "https://app.resumegenius.com/data-access/personal-data",
+        "difficulty": "easy",
+        "notes": "Simply login to your resumegenius account, go to the form, click delete and you should be good to go!",
+        "domains": [
+            "resumegenius.com"
+        ]
+    },
     {
         "name": "Retrospring",
         "url": "https://retrospring.net/settings/account",
@@ -9978,8 +10039,8 @@
 
     {
         "name": "showRSS",
-        "url": "https://showrss.info",
-        "difficulty": "impossible",
+        "url": "https://showrss.info/edit/delete",
+        "difficulty": "easy",
         "domains": [
             "showrss.info"
         ]
@@ -9999,16 +10060,9 @@
 
     {
         "name": "Shutterfly",
-        "url": "https://www.shutterfly.com/about/contact_details.jsp",
-        "difficulty": "hard",
-        "notes": "Contact customers services by email or live chat and request deletion.",
-        "notes_tr": "E-posta veya canlı sohbet yoluyla müşteri hizmetleriyle iletişime geçin ve silme talebinde bulunun.",
-        "notes_fr": "Contactez le service clients par e-mail our par le tchat en ligne et demandez la suppression de votre compte.",
-        "notes_it": "Contatta il servizio clienti via email o via chat e richiedi la cancellazione.",
-        "notes_pt_br": "Contate a assistência ao cliente por e-mail ou chat ao vivo e peça a remoção.",
-        "notes_cat": "Contacti amb l'assistència al client per e-mail o chat i demani la supressió del compte.",
-        "notes_es": "Contacta con la asistencia al cliente por e-mail o chat y pide la supresión de la cuenta.",
-        "email": "customerservice@cs.shutterfly.com",
+        "url": "https://www.shutterfly.com/delete-account/",
+        "difficulty": "easy",
+        "notes": "Visit the linked page and request account deletion. You will receive an email when your request is completed.",
         "domains": [
             "shutterfly.com"
         ]
@@ -12036,6 +12090,19 @@
     },
 
     {
+        "name": "Wargaming.net",
+        "url": "https://eu.wargaming.net/personal/suspend_account/",
+        "difficulty": "medium",
+        "notes": "Follow the link, log in, and enter your email address to confirm account deletion. A confirmation email will be sent to you. Follow the 'Confirm' link in the email, login again, and finally confirm account deletion again. After 45 days your account will be deleted permanently.",
+        "domains": [
+            "ru.wargaming.net",
+            "na.wargaming.net",
+            "eu.wargaming.net",
+            "asia.wargaming.net"
+        ]
+    },
+
+    {
         "name": "Wattpad",
         "url": "https://www.wattpad.com/settings",
         "difficulty": "impossible",
@@ -12300,6 +12367,16 @@
         "notes": "Go to your account page, the delete button is small, you can find it under the 'joining date'. Also, their privacy policy states they'll store your username, password, email(if provided) even after account deletion.",
         "domains": [
             "windscribe.com"
+        ]
+    },
+    {
+        "name": "Wine HQ",
+        "url": "https://forum.winehq.org/viewtopic.php?p=136023",
+        "difficulty": "hard",
+        "notes": "Send an E-Mail to the webmaster. If that didn't work, create a new forum thread on https://forum.winehq.org",
+        "email": "web-admin@winehq.org",
+        "domains": [
+            "winehq.org"
         ]
     },
 
