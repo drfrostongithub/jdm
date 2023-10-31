@@ -9,13 +9,14 @@ The sites, urls and additional notes are stored in `_data/sites.json`. If you wa
   - `easy`: Sites with a simple process such as a 'delete account' button
   - `medium`: Sites that do allow account deletion but require you to perform additional steps
   - `hard`: Sites that require you to contact customer services or those that don't allow automatic or easy account deletion
+  - `limited`: Sites that only allow you to delete your account if you live in an area with privacy rights. This is only used for websites that require proof that you are covered by local law and verify it.
   - `impossible`: For sites where it's basically impossible to totally delete your account, even if you contact them
-- `notes`: *(optional)* Notes will be shown when someone hovers on that service. Notes may include additional information you might need to delete your account (e.g. Skype) or consequences of deleting your account (e.g. iTunes). If you are drastically changing existing notes, do delete its translations, unless you have proficiency in one or more of them.
+- `notes`: *(optional)* Notes will be shown when someone hovers on that service. Notes may include additional information you might need to delete your account (e.g. Skype) or consequences of deleting your account (e.g. iTunes). If you are drastically changing existing notes, do delete its translations, unless you have proficiency in one or more of them. If you want to include links in the notes, you should use markdown syntax, e.g.: `Visit [this page](https://example.com).` would become "Visit [this page](https://example.com)."
 - `notes_CODE`: *(optional)* Use the language `CODE` as suffix of the `notes` field to provide language-specific instructions, shown on the respective language page.
 - `email`: *(optional)* If you have to send an email to a company to cancel your account, add the email address here. We'll do the rest.
 - `email_subject`: *(optional)* Set the subject for the email link. If unset, the default text is "Account Deletion Request".
 - `email_body`: *(optional)* Set the body for the email link. If unset, the default text is "Please delete my account, my username is XXXXXX".
-- `domains`: This is used by the [Chrome extension](https://github.com/jdm-contrib/justdelete.me-chrome-extension)
+- `domains`: This is used by the [Chrome extension](https://github.com/jdm-contrib/justdelete.me-chrome-extension) and [Firefox Add-on](https://github.com/jdm-contrib/justdelete.me-firefox-addon)
 
 ## Contribution checklist
 

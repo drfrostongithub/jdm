@@ -1,3 +1,4 @@
+<!-- Search / Filter section -->
 <div class="search">
     <div class="search-container">
         <input type="text" id="search" placeholder="{{ site.data.trans[page.lang].search }}">
@@ -7,11 +8,13 @@
     <div class="sort-container">
         <button class="popular">{{ site.data.trans[page.lang].popular }}</button>
         <button data-dropdown="#alphabetical-dropdown" class="az-sort">A - Z</button>
+        <button data-dropdown="#number-dropdown" class="09-sort">0 - 9</button>
         <button data-dropdown="#difficulty-dropdown" class="diff-sort">{{ site.data.trans[page.lang].difficulty }}</button>
         <button class="reset">{{ site.data.trans[page.lang].reset }}</button>
     </div>
 </div>
 
+<!-- Site list -->
 <main>
     <section class="sites" id="sites">
         <p class="no-results">{{ site.data.trans[page.lang].noresults }} <a href='https://github.com/jdm-contrib/jdm'>{{ site.data.trans[page.lang].noresultshelp }}</a>.</p>
@@ -31,6 +34,8 @@
                         {{ site.data.trans[page.lang].difficulty_medium }}
                     {% elsif entry.difficulty == 'hard' %}
                         {{ site.data.trans[page.lang].difficulty_hard }}
+                    {% elsif entry.difficulty == 'limited' %}
+                        {{ site.data.trans[page.lang].difficulty_limited }}
                     {% elsif entry.difficulty == 'impossible' %}
                         {{ site.data.trans[page.lang].difficulty_impossible }}
                     {% endif %}
@@ -40,9 +45,9 @@
                 {% if entry.notes or entry[lang_notes] or entry.email or entry.difficulty == 'easy' %}
                     <div class="tooltip-content">
                         {% if entry[lang_notes] %}
-                            {{ entry[lang_notes] }}
+                            {{ entry[lang_notes] | markdownify }}
                         {% elsif entry.notes %}
-                            {{ entry.notes }}
+                            {{ entry.notes | markdownify }}
                         {% elsif entry.email %}
                             {{ site.data.trans[page.lang].defaultnote_email }}
                         {% elsif entry.difficulty == 'easy' %}
@@ -81,6 +86,7 @@
                 <li class="easy"><span class="difficulty">{{ site.data.trans[page.lang].difficulty_easy|safe }}</span> - {{ site.data.trans[page.lang].guideeasy|safe }}</li>
                 <li class="medium"><span class="difficulty">{{ site.data.trans[page.lang].difficulty_medium|safe }}</span> - {{ site.data.trans[page.lang].guidemedium|safe }}</li>
                 <li class="hard"><span class="difficulty">{{ site.data.trans[page.lang].difficulty_hard|safe }}</span> - {{ site.data.trans[page.lang].guidehard|safe }}</li>
+                <li class="limited"><span class="difficulty">{{ site.data.trans[page.lang].difficulty_limited|safe }}</span> - {{ site.data.trans[page.lang].guidelimited|safe }}</li>
                 <li class="impossible"><span class="difficulty">{{ site.data.trans[page.lang].difficulty_impossible|safe }}</span> - {{ site.data.trans[page.lang].guideimpossible|safe }}</li>
             </ul>
         </div>
@@ -89,11 +95,19 @@
 
 <div class="banner-block">
     <div class="banner-content">
-        <div class="banner-block-half" id="extension">
-            <h2>{{ site.data.trans[page.lang].extension|safe }}</h2>
-            <p>{{ site.data.trans[page.lang].extensionp1|safe }} <a target='_blank' href='https://mikerogers.io'>{{ site.data.trans[page.lang].mikerogers|safe }}</a> {{ site.data.trans[page.lang].extensionp2|safe }}</p>
-            <p>{{ site.data.trans[page.lang].extensionp3|safe }}</p>
-            <p>{{ site.data.trans[page.lang].extensionp4|safe }} <a target='_blank' href='https://chrome.google.com/webstore/detail/justdeleteme/hfpofkfbabpbbmchmiekfnlcgaedbgcf'>{{ site.data.trans[page.lang].extensionp5|safe }}</a> {{ site.data.trans[page.lang].extensionp6|safe }}.</p>
+        <div class="banner-block-half" id="extension_browser">
+            <h2>{{ site.data.trans[page.lang].extension_browser|safe }}</h2>
+            <p>{{ site.data.trans[page.lang].extensionp1|safe }}</p>
+            <p>
+                {% assign post_extension_link_text = site.data.trans[page.lang].extensionp5 | safe %}
+                {% if post_extension_link_text == '' %}
+                    {% assign post_extension_link_text = '.' %}
+                {% endif %}
+                {{ site.data.trans[page.lang].extensionp2|safe }}
+                <a target='_blank' href='https://chrome.google.com/webstore/detail/justdeleteme/hfpofkfbabpbbmchmiekfnlcgaedbgcf'>{{ site.data.trans[page.lang].extensionp3|safe }}</a>
+                /
+                <a target='_blank' href='https://addons.mozilla.org/en-US/firefox/addon/justdeleteme/'>{{ site.data.trans[page.lang].extensionp4|safe }}</a>{{ post_extension_link_text }}
+            </p>
         </div>
         <div class="banner-block-half">
             <h2>{{ site.data.trans[page.lang].extensionguide|safe }}</h2>
@@ -101,11 +115,12 @@
                 <li><span class="dot-wrapper"><span class="dot easy"></span></span> - {{ site.data.trans[page.lang].guideeasy|safe }}</li>
                 <li><span class="dot-wrapper"><span class="dot medium"></span></span> -  {{ site.data.trans[page.lang].guidemedium|safe }}</li>
                 <li><span class="dot-wrapper"><span class="dot hard"></span></span> - {{ site.data.trans[page.lang].guidehard|safe }}</li>
+                <li><span class="dot-wrapper"><span class="dot limited"></span></span> - {{ site.data.trans[page.lang].guidelimited|safe }}</li>
                 <li><span class="dot-wrapper"><span class="dot impossible"></span></span> - {{ site.data.trans[page.lang].guideimpossible|safe }}</li>
             </ul>
         </div>
     </div>
-    <div class="banner-block-extension"></div>
+    <div class="banner-block-extension_browser"></div>
 </div>
 
 <!-- Language dropdown -->
@@ -136,10 +151,23 @@
     </ul>
 </div>
 
+<!-- Numerical sorting -->
+<div id="number-dropdown" class="dropdown dropdown-tip">
+    <ul class="dropdown-menu ltr">
+        <span class="alpha-sort">
+            {% assign numbers = '0,1,2,3,4,5,6,7,8,9' | split:',' %}
+            {% for number in numbers %}
+            <li><a href="">{{ number }}</a></li>
+            {% endfor %}
+        </span>
+    </ul>
+</div>
+
+<!-- Difficulty sorting -->
 <div id="difficulty-dropdown" class="dropdown dropdown-tip">
     <ul class="dropdown-menu">
         <span class="diff-sort">
-            {% assign difficulties = 'easy,medium,hard,impossible' | split:',' %}
+            {% assign difficulties = 'easy,medium,hard,limited,impossible' | split:',' %}
             {% for difficulty in difficulties %}
                 {% capture difficulty_value %}difficulty_{{ difficulty }}{% endcapture %}
                 <li><a href="#">{{ site.data.trans[page.lang][difficulty_value] }}</a></li>
