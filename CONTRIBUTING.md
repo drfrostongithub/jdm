@@ -16,7 +16,7 @@ The sites, urls and additional notes are stored in `_data/sites.json`. If you wa
 - `email`: *(optional)* If you have to send an email to a company to cancel your account, add the email address here. We'll do the rest.
 - `email_subject`: *(optional)* Set the subject for the email link. If unset, the default text is "Account Deletion Request".
 - `email_body`: *(optional)* Set the body for the email link. If unset, the default text is "Please delete my account, my username is XXXXXX".
-- `domains`: This is used by the [Chrome extension](https://github.com/jdm-contrib/justdelete.me-chrome-extension) and [Firefox Add-on](https://github.com/jdm-contrib/justdelete.me-firefox-addon)
+- `domains`: This is used by the [Unofficial Chrome extension](https://github.com/fregante/jdm) and [Firefox Add-on](https://github.com/jdm-contrib/justdelete.me-firefox-addon)
 
 ## Contribution checklist
 
@@ -30,15 +30,24 @@ The sites, urls and additional notes are stored in `_data/sites.json`. If you wa
 
 ## Translation
 
-If you want to help on the translation of the site, you can read [translation reference](TRANSLATION_REFERENCE.md) to see what each of the keys is describing or translating.
+There are two options if you want to help on the translation of the site, via Crowdin or directly on the repository. **[Crowdin](https://crowdin.com/project/just-delete-me/invite?h=127042d1581b3e91812c0dd1afa4d7fe1956554) is preferred** as it is more user friendly.
 
 ### Modify an existing Translation
 
-Look for the `CODE.json` file in the `_data/trans/` directory where `CODE` is your [short country code](https://en.wikipedia.org/wiki/Country_code)
+Via [Crowdin](https://crowdin.com/project/just-delete-me/invite?h=127042d1581b3e91812c0dd1afa4d7fe1956554): just click on the language and browse the strings with missing translations.
+
+Via repository: Look for the `CODE.json` file in the `_data/trans/` directory where `CODE` is your [short country code](https://en.wikipedia.org/wiki/Country_code) and then translate it there. You can read [translation reference](TRANSLATION_REFERENCE.md) to see what each of the keys is describing or translating.
 
 ### Add a new translation
 
-1. Create a new `CODE.json` file in the `_data/trans/` directory where `CODE` is your [short country code](https://en.wikipedia.org/wiki/Country_code)
-2. Copy the contents of `en.json` to your new file
-3. Translate each line
-4. Within the `_pages/` directory, copy `_pages/index.html` to a new `CODE.html` file, and update the `lang: CODE` line to match the new page's code
+#### Via Crowdin
+
+Open an issue to request a new language to be added, then refer to the [Modify an existing translation](#modify-an-existing-translation) section.
+
+#### Via Repository
+
+1. Create a new `CODE.json` file in the `_data/trans/` directory where `CODE` is a [language tags as described by the IETF in BCP47](https://www.rfc-editor.org/rfc/rfc5646.html).  
+Typically, using the shortest available [ISO 639 code](https://www.loc.gov/standards/iso639-2/php/English_list.php) is sufficient. Appending an [ISO 3166-1 alpha-2 ](https://en.wikipedia.org/wiki/ISO_3166-1_alpha-2#Officially_assigned_code_elements) country code using a hyphen to distinguish the region is possible, if necessary. (e.g. `cs` for Czech or `pt-PT` for portuguese as spoken in Portugal)
+2. Copy the contents of `en.json` to your new file.
+3. Translate each line.
+4. Within the `_pages/` directory, copy .`_pages/index.html` to a new `CODE.html` file, and update the `lang: CODE` line to match the new page's code.
